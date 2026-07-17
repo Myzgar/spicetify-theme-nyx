@@ -1,0 +1,25 @@
+{
+  "name": "Nyxtails",
+  "description": "Sleek, highly customizable transparent Spicetify theme with audio-reactive background zoom and spinning vinyl album art.",
+  "preview": "Image/2.png",
+  "readme": "README.md",
+  "usercss": "Nyx/user.css",
+  "schemes": "Nyx/color.ini",
+  "include": [
+    "https://myzgar.github.io/spicetify-theme-nyx/Nyx/theme.js"
+  ],
+  "authors": [
+    {
+      "name": "Myzgar",
+      "url": "https://github.com/Myzgar"
+    }
+  ],
+  "tags": [
+    "dark",
+    "transparent",
+    "animated",
+    "vinyl",
+    "customizable",
+    "video-background"
+  ]
+}
