@@ -42,14 +42,10 @@ A sleek, modern, highly customizable transparent theme for **Spotify** using **S
 Your repository / directory structure should look like this:
 
 ```text
+themes/
 ├── nyx/
 │   ├── theme.js
 │   └── user.css
-├── Image/
-│   ├── 1.png
-│   ├── 2.png
-│   └── 3.png
-└── README.md
 ```
 
 ---
