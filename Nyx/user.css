@@ -1,0 +1,632 @@
+/* PANEL SIZE VARIABLE */
+:root {
+  --nyxtails-panel-width: 1000px;
+  --sharp: 0;
+  --blur: 0px;
+  --cont: 100%;
+  --satu: 100%;
+  --bright: 100%;
+}
+
+
+
+
+* {
+  border-radius: 24px !important
+}
+
+.main-root {
+  border-radius: 24px !important;
+  overflow: hidden !important
+}
+
+.Root__top-container {
+  border-radius: 24px !important;
+  overflow: hidden !important
+}
+
+body {
+  border-radius: 24px !important
+}
+
+
+:root {
+  --backdrop-light: rgb(68 68 68 / 30%);
+  --backdrop-lighter: rgba(0, 0, 0, 0.3);
+  --backdrop: rgba(0, 0, 0, 0.3);
+  --backdrop-darker: rgba(0, 0, 0, 0.4);
+  --backdrop-dark: rgba(0, 0, 0, 0.7);
+  --button-border: 8px;
+  --sharp: 0;
+}
+
+.encore-dark-theme {
+  --background-base: transparent;
+}
+
+.encore-layout-themes,
+.encore-dark-theme .encore-announcement-set,
+.encore-bright-accent-set {
+  --background-highlight: var(--backdrop) !important;
+  --background-press: var(--backdrop-darker) !important;
+  --background-elevated-base: var(--backdrop) !important;
+  --background-elevated-highlight: var(--backdrop-darker) !important;
+  --background-elevated-press: var(--backdrop-lighter) !important;
+  --spice-card: rgba(var(--spice-rgb-card), 0.6) !important;
+}
+
+svg {
+  filter: drop-shadow(-2px 2px 2px rgb(0 0 0 / 15%));
+  overflow: visible;
+}
+
+/* SPICETIFY MODAL SIZE */
+.GenericModal__overlay>div {
+  width: var(--nyxtails-panel-width) !important;
+  height: fit-content;
+}
+
+
+/* TRANSPARENCY SETTINGS */
+.encore-dark-theme {
+  --background-base: transparent;
+}
+
+.Root__main-view {
+  background-color: rgba(0, 0, 0, 0.3) !important;
+}
+
+.main-topBar-background {
+  background: none !important;
+  backdrop-filter: blur(25px) !important;
+}
+
+#global-nav-bar {
+  background-color: transparent !important;
+}
+
+/* NAV BAR */
+.Root__nav-bar,
+.WBFaUw_oOfN2m4aTxggt {
+  background-color: transparent;
+}
+
+.main-yourLibraryX-entryPoints {
+  background-color: rgba(0, 0, 0, 0.3) !important;
+}
+
+
+
+
+/*-------------------
+NAV STYLES
+-------------------*/
+.spotify__container--is-desktop.spotify__os--is-windows .control-nav .main-topBar-container,
+.spotify__container--is-desktop.spotify__os--is-windows .global-nav .Root__globalNav {
+  --top-bar-padding-start: clamp(8px, calc(64px / var(--zoom, 1)), 80px);
+  --top-bar-padding-end: clamp(8px, calc(144px / var(--zoom, 1)), 180px);
+}
+
+.spotify__container--is-desktop.spotify__os--is-macos .control-nav .main-topBar-container,
+.spotify__container--is-desktop.spotify__os--is-macos .global-nav .Root__globalNav {
+  --top-bar-padding-start: clamp(8px, calc(80px / var(--zoom, 1)), 100px);
+}
+
+.Root__globalNav,
+.control-nav .main-topBar-container {
+  padding-inline: var(--top-bar-padding-start, var(--panel-gap, 0.5rem)) var(--top-bar-padding-end, var(--panel-gap, 0.5rem));
+}
+
+div.main-globalNav-historyButtonsContainer div>button,
+.custom-navlink {
+  box-shadow: none !important;
+  width: 32px !important;
+  height: 32px !important;
+  min-block-size: 0 !important;
+  border-radius: 50% !important;
+  background-color: var(--backdrop) !important;
+}
+
+div.main-globalNav-historyButtonsContainer div>button svg,
+div.main-topBar-topbarContentRight div>button svg,
+.custom-navlink>span>svg {
+  width: 18px !important;
+  height: 18px !important;
+}
+
+div.main-globalNav-historyButtonsContainer {
+  padding-inline-end: 8px !important;
+}
+
+.Kgjmt7IX5samBYUpbkBu,
+.NjFwvjnZ6o4vmYe {
+  display: none;
+}
+
+:root {
+  --zoom: 1;
+}
+
+/*-------------------
+ALBUM ART BACKGROUND
+-------------------*/
+/* BACKGROUND FILTERS AND SHARPNESS */
+.Root__top-container::before,
+#nyxtails-bg-video {
+  content: "";
+  background-image: var(--image_url, none) !important;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  position: fixed;
+  display: block;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 0;
+  pointer-events: none;
+  opacity: 0.55;
+  transform: scale(var(--nyxtails-bg-zoom, 1.01)) !important;
+  will-change: transform;
+
+  /* Advanced Filter System */
+  filter: blur(var(--blur)) contrast(calc(var(--cont) + (var(--sharp) * 15%))) saturate(var(--satu)) brightness(calc(var(--bright) - (var(--sharp) * 2%)));
+}
+
+.Root__top-container::before {
+  content: "";
+  background-image: var(--image_url, none) !important;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  position: fixed;
+  display: block;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100vw;
+  height: 100vh;
+  min-width: 100%;
+  min-height: 100%;
+  /* SHARPEN SIMULATION: Increase contrast and decrease brightness slightly while saturation stays */
+  filter: blur(var(--blur)) contrast(calc(var(--cont) + (var(--sharp) * 10%))) saturate(var(--satu)) brightness(calc(var(--bright) - (var(--sharp) * 2%)));
+  pointer-events: none;
+  backface-visibility: hidden;
+  opacity: 0.55;
+  z-index: 0;
+  transform: scale(var(--nyxtails-bg-zoom, 1)) !important;
+  transform-origin: center center !important;
+  will-change: transform;
+}
+
+#nyxtails-bg-video {
+  filter: blur(var(--blur)) contrast(calc(var(--cont) + (var(--sharp) * 10%))) saturate(var(--satu)) brightness(calc(var(--bright) - (var(--sharp) * 2%)));
+  opacity: 0.55;
+}
+
+/*-------------------------
+TRANSPARENT WINDOW CONTROLS
+--------------------------*/
+
+.Root__top-container {
+  padding-top: clamp(8px, calc(var(--topbar-height, 68px) / var(--zoom, 1)), 90px);
+}
+
+.OPsY6bKl1_FfA8jFpq1V:empty {
+  display: none;
+}
+
+.OPsY6bKl1_FfA8jFpq1V,
+.OPsY6bKl1_FfA8jFpq1V>*,
+.OPsY6bKl1_FfA8jFpq1V button,
+.OPsY6bKl1_FfA8jFpq1V div[role="button"] {
+  background: transparent !important;
+  background-color: transparent !important;
+  box-shadow: none !important;
+}
+
+#global-nav-bar {
+  background-color: transparent !important;
+  padding-top: 9px !important;
+}
+
+/*------------
+NAVIGATION BAR
+-------------*/
+
+.Root__nav-bar,
+.WBFaUw_oOfN2m4aTxggt {
+  background-color: transparent;
+}
+
+.TkqXOzhmCCuE6YI3hlgA,
+.WBFaUw_oOfN2m4aTxggt {
+  backdrop-filter: blur(20px);
+}
+
+.Root__nav-bar:has(.main-home-homeHeader) {
+  display: none !important;
+}
+
+/*----------
+YOUR LIBRARY
+----------*/
+
+.main-yourLibraryX-entryPoints {
+  background-color: var(--backdrop) !important;
+}
+
+.main-yourLibraryX-libraryContainer {
+  --background-highlight: rgba(255, 255, 255, 0.05) !important;
+  --background-press: rgba(255, 255, 255, 0.05);
+  background: none !important;
+}
+
+/*-------------
+NOW PLAYING BAR
+--------------*/
+
+.Root__now-playing-bar {
+  margin: 0;
+  padding: 0;
+  background-color: var(--backdrop) !important;
+  border-radius: var(--button-border);
+}
+
+.main-nowPlayingBar-nowPlayingBar {
+  height: 90px !important;
+  margin-right: 16px;
+}
+
+.progress-bar {
+  --bg-color: rgba(255, 555, 255, 0.2);
+  --fg-color: var(--spice-button);
+  --is-active-fg-color: var(--spice-button-active);
+}
+
+/*-----------
+PLAYLIST VIEW
+------------*/
+
+.Root__main-view {
+  background-color: var(--backdrop) !important;
+  transition: opacity 0.4s ease;
+}
+
+.main-trackList-trackListHeader {
+  box-shadow: none !important;
+  backdrop-filter: blur(8px) !important;
+}
+
+/*-----
+TOP BAR
+------*/
+
+.main-topBar-background {
+  background: none;
+  backdrop-filter: blur(25px) !important;
+}
+
+.main-entityHeader-topbarTitle {
+  cursor: pointer;
+}
+
+/*----------
+PLAY BUTTONS
+----------*/
+
+.main-playButton-PlayButton {
+  background: none !important;
+}
+
+/*----------------------
+HIDE NOW PLAYING SIDEBAR
+----------------------*/
+
+body.__nyxtails_hidenowplayingsidebar .Root__right-sidebar:has(div[aria-hidden=true]) {
+  display: none !important;
+}
+
+body.__nyxtails_hidenowplayingsidebar .Root__top-container:has(.Root__right-sidebar div[aria-hidden=true]) .Root__main-view {
+  width: calc(100% + var(--panel-gap)) !important;
+}
+
+/*---------------------------
+MAIN VIEW OPACITY TOGGLE BTN
+---------------------------*/
+
+.nyxtails-bg-toggle-btn {
+  position: relative;
+  transition: all 0.2s ease !important;
+}
+
+.nyxtails-bg-toggle-btn:hover {
+  transform: scale(1.1);
+  filter: drop-shadow(0 0 6px var(--spice-accent));
+}
+
+/*-------------------
+POPUP MODAL / SETTINGS
+-------------------*/
+
+.nyxtails-tab-content {
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(5px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+#nyxtails-preview-container video,
+#nyxtails-preview-container img {
+  width: 80px;
+  height: 80px;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+.main-trackCreditsModal-container {
+  all: unset !important;
+  display: block !important;
+  position: relative !important;
+  width: 100% !important;
+  box-sizing: border-box !important;
+}
+
+.main-trackCreditsModal-container,
+.main-nowPlayingView-nowPlayingGrid,
+.main-nowPlayingView {
+  all: unset !important;
+  display: block !important;
+  position: relative !important;
+  width: 100% !important;
+  box-sizing: border-box !important;
+  background: transparent !important;
+  /* Completely clear background */
+}
+
+.main-nowPlayingView-coverArtContainer .main-nowPlayingView-coverArtSquare {
+  all: unset !important;
+  display: flex !important;
+  justify-content: center !important;
+  width: 100% !important;
+  padding: 20px 0 !important;
+}
+
+.main-nowPlayingView-section {
+  background-color: var(--backdrop) !important;
+  backdrop-filter: blur(15px) !important;
+  border-radius: 15px !important;
+  margin: 10px !important;
+  padding: 15px !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+}
+
+.Root__right-sidebar,
+#context-menu {
+
+  background-color: var(--backdrop) !important;
+  backdrop-filter: blur(15px) !important;
+  border-radius: 15px !important;
+  margin: 15px !important;
+  padding: 1px !important;
+  border: 0px solid rgba(255, 255, 255, 0.1) !important;
+}
+
+
+:root {
+  --nyxtails-panel-width: 750px;
+  --sharp: 0;
+  --blur: 0px;
+  --cont: 100%;
+  --satu: 100%;
+  --bright: 100%;
+  --backdrop: rgba(0, 0, 0, 0.3);
+  --button-border: 12px;
+
+  /* RESET SPOTIFY VARIABLES (This part kills the darkness) */
+  --spice-main: transparent !important;
+}
+
+/* --- VINYL EFFECT --- */
+
+/* 1. Make Covers Circular */
+.main-nowPlayingWidget-coverArt,
+.main-nowPlayingView-coverArt,
+.main-nowPlayingWidget-coverArt img,
+.main-nowPlayingView-coverArt img {
+  border-radius: 50% !important;
+  /* Full circle */
+  aspect-ratio: 1 / 1 !important;
+  object-fit: cover !important;
+}
+
+/* 2. Rotation Animation Definition */
+@keyframes vinyl-spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* 3. Apply Animation (Default: Paused) */
+.main-nowPlayingWidget-coverArt,
+.main-nowPlayingView-coverArt {
+  animation: vinyl-spin 8s linear infinite;
+  animation-play-state: paused;
+  /* Pause when music stops */
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5), inset 0 0 0 10px rgba(255, 255, 255, 0.05);
+  border: 2px solid rgba(255, 255, 255, 0.1);
+}
+
+/* 4. Spinning Class While Playing */
+.nyxtails-spinning {
+  animation-play-state: running !important;
+}
+
+/* Center Dot (Optional: Looks like vinyl hole) */
+.main-nowPlayingWidget-coverArt::after,
+.main-nowPlayingView-coverArt::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 10px;
+  height: 10px;
+  background: #121212;
+  border-radius: 50%;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  z-index: 10;
+}
+
+.e-10451-text,
+.encore-text-body-medium,
+.encore-internal-color-text-base,
+.notistack-SnackbarContainer {
+  color: lime !important;
+}
+
+
+/* Apply selected color from panel to text */
+.e-10451-text,
+.encore-text-body-medium,
+.encore-internal-color-text-base,
+.notistack-SnackbarContainer {
+  color: var(--spice-accent) !important;
+}
+
+/* --- VINYL DESIGN --- */
+.main-nowPlayingWidget-coverArt,
+.main-nowPlayingView-coverArt,
+.main-nowPlayingWidget-coverArt img,
+.main-nowPlayingView-coverArt img {
+  border-radius: 50% !important;
+  /* Make covers circular */
+  aspect-ratio: 1 / 1 !important;
+  object-fit: cover !important;
+}
+
+/* Rotation Animation */
+@keyframes vinyl-spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.main-nowPlayingWidget-coverArt,
+.main-nowPlayingView-coverArt {
+  animation: vinyl-spin 8s linear infinite;
+  animation-play-state: paused;
+  /* Initial state paused */
+  border: 3px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+}
+
+/* Spinning class based on music */
+.nyxtails-spinning {
+  animation-play-state: running !important;
+}
+
+
+
+/* --- SMOOTH VINYL SYSTEM --- */
+
+/* 1. Shape and Size Fixation (Full Circle) */
+.main-nowPlayingWidget-coverArt,
+.main-nowPlayingView-coverArt {
+  width: 100% !important;
+  aspect-ratio: 1 / 1 !important;
+  border-radius: 50% !important;
+  overflow: hidden !important;
+  position: relative !important;
+  border: 2px solid rgba(255, 255, 255, 0.1) !important;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5) !important;
+}
+
+/* Custom fixation for small cover on bottom left */
+.main-nowPlayingWidget-coverArt {
+  width: 56px !important;
+  height: 56px !important;
+  border: 0px transparent !important;
+}
+
+.main-nowPlayingWidget-coverArt img,
+.main-nowPlayingView-coverArt img {
+  border-radius: 50% !important;
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+
+}
+
+/* 2. Vinyl Hole in Center */
+.main-nowPlayingWidget-coverArt::after,
+.main-nowPlayingView-coverArt::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  filter: blur(1px) !important;
+  width: 12%;
+  /* Size of the hole */
+  height: 12%;
+  background-color: #1f2843;
+  /* Spotify background color */
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  z-index: 5;
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.8);
+
+}
+
+/* 3. Seamless Smooth Animation */
+@keyframes vinyl-spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  50% {
+    transform: rotate(360deg);
+  }
+
+  99.9% {
+    transform: rotate(720deg);
+  }
+
+  100% {
+    transform: rotate(0deg);
+  }
+  
+
+}
+
+.main-nowPlayingWidget-coverArt,
+.main-nowPlayingView-coverArt {
+  animation: vinyl-spin 6s linear infinite;
+}
+
+/* Class activated while playing music */
+.nyxtails-spinning {
+  animation-play-state: running !important;
+}
